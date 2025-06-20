@@ -1,0 +1,33 @@
+.primary {
+    height: 58px;
+    border-radius: 4px;
+    background-color: #9B2C40;
+    box-shadow: 0 2px 4px 0px #1B212F0F;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.primary:disabled {
+    background-color: #EDEBEB;
+    color: #1B212F4D
+}
+
+.text {
+    color: #9B2C40;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: transparent;
+    border: none;
+
+}

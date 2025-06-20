@@ -1,16 +1,4 @@
-export function getCookieValue(key) {
-    const name = key + "=";
-    const decodedCookies = decodeURIComponent(document.cookie);
-    const cookiesArray = decodedCookies.split(';');
 
-    for (let i = 0; i < cookiesArray.length; i++) {
-        let cookie = cookiesArray[i].trim();
-        if (cookie.indexOf(name) === 0) {
-            return cookie.substring(name.length, cookie.length);
-        }
-    }
-    return null;
-}
 
 export function setCookie(name, value, days) {
     let expires = "";

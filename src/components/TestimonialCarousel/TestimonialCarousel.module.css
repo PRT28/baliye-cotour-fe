@@ -1,0 +1,76 @@
+.carouselWrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0a1c2b;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+
+.arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  padding: 0 1rem;
+}
+
+.cardsWrapper {
+  display: flex;
+    gap: 7.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 250px;
+  min-width: 250px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.stars {
+  color: #2b572b;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.review {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.name {
+  font-weight: bold;
+  color: #222;
+  margin-top: 0.5rem;
+}

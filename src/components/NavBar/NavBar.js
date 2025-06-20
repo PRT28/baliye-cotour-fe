@@ -3,9 +3,22 @@
 import React from "react";
 import styles from './NavBar.module.css';
 import Image from "next/image";
-import { getCookieValue } from "@/lib/cookies";
 
 const NavBar = () => {
+    function getCookieValue(key) {
+        const name = key + "=";
+        const decodedCookies = decodeURIComponent(window?.document?.cookie);
+        const cookiesArray = decodedCookies.split(';');
+
+        for (let i = 0; i < cookiesArray.length; i++) {
+            let cookie = cookiesArray[i].trim();
+            if (cookie.indexOf(name) === 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+        
+        return null;
+    }
 
     const token = getCookieValue("baliye-token");
 

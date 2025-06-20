@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 13rem;
+  background-color: #3c5c3a;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+  margin: 1rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: serif;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #e1e1e1;
+  margin-top: 0.5rem;
+}
+
+.h4 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  color: #e1e1e1;
+}
+
+.links li {
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #e1e1e1;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}

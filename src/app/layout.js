@@ -5,6 +5,7 @@ import SessionWrapper from "./SessionWrapper";
 
 import 'core-js'
 import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
         <SessionWrapper>{children}</SessionWrapper>
+        <Footer />
       </body>
     </html>
   );
