@@ -1,0 +1,36 @@
+  
+  .productCard {
+    height: 450px;
+  }
+
+  .productImg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .productTitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    
+  }
+
+  .productPrice {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    margin-top: 8px;
+  }
+
+  .editorPick {
+    background-color: #9B2C40;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.6px;
+    border-radius: 4px;
+    padding: 5px;
+  }

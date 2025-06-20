@@ -31,3 +31,18 @@
     border: none;
 
 }
+
+.secondary {
+    border: 1.5px solid #9B2C40;
+    color: #9B2C40;
+    background-color: transparent;
+    padding: 16px 24px;
+    border-radius: 8px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    
+}

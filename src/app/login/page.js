@@ -17,7 +17,7 @@ export default function Home() {
     const [number, setNumber] = useState('');
     const [active, setActive] = useState(false);
     const [otp, setOtp] = useState('');
-    const [verifyOtp, setVerifyOtp] = useState(true);
+    const [verifyOtp, setVerifyOtp] = useState(false);
 
     const countries = Object.keys(countryIcons);
 

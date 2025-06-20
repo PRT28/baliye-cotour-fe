@@ -25,7 +25,7 @@ const NavBar = () => {
     return (
         <div className={styles.navbar}>
             <div className={styles.contentWrapper}>
-                <div className={styles.text}>Coord Set</div>
+                <div onClick={() => window.location.pathname = '/kurta'} className={styles.text}>Coord Set</div>
                 <div className={styles.text}>Potli Bags</div>
             </div>
             <Image
@@ -34,6 +34,7 @@ const NavBar = () => {
                 width={200}
                 height={38}
                 priority
+                style={{marginRight: '7rem'}}
             />
             {token ? <div className={styles.contentWrapper}>
                     <img src="/ShoppingCart.svg" alt="" />
