@@ -2,7 +2,9 @@
 .header {
     font-family: "Lato", sans-serif;
     font-size: 24px;
+    color: #0D1829;
     font-weight: 700;
+    background: #fff;
     line-height: 32px;
     letter-spacing: -0.6000000238418579px;
 }
@@ -54,6 +56,8 @@
   .addressContainer, .measurementContainer {
     display: flex;
     align-items: baseline;
+    width: 912px;
+    background: #fff;
     padding: 32px;
     border-bottom: 1px solid #E8E8E8;
   }
@@ -69,6 +73,7 @@
   .addName {
     font-family: "Lato", sans-serif;
     font-size: 16px;
+    color: #0D1829;
     font-weight: 700;
     line-height: 20.8px;
     margin-bottom: 12px;
@@ -113,3 +118,74 @@
     text-align: left;
     color: #0D1829;
   }
+
+  .formWrapper {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: white;
+  width: 912px;
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  color: #0D1829;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.unit {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  color: #5C6476;
+}
+
+.measurementCard {
+  display: flex;
+  align-items: baseline;
+  width: 912px;
+  background: #fff;
+  padding: 32px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.measurementLabel {
+  width: 100%;
+  cursor: pointer;
+}
+
+.measureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.measureCell {
+  min-width: 100px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}

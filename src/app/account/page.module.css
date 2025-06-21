@@ -1,0 +1,59 @@
+.page {
+    padding: 32px 104px;
+    background: #FAF8F0;
+}
+
+.headerWrapper {
+    margin-bottom: 24px;
+}
+
+.header {
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    color: #1B212F;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6000000238418579px;
+}
+
+.parentDiv {
+    display: flex;
+    gap: 100px
+}
+
+.container {
+    padding: 24px;
+    background: #FFFFFF;
+    height: 286px;
+    width: 288px;
+}
+
+.list {
+    color: #5C6476;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.boldHeading {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.seperator {
+    margin: 24px 0;
+}
+
+.listItem{
+    cursor: pointer;
+}
+
+.listItem:hover{
+    text-decoration: underline;
+}
+
+.activeItem{
+    color: #9B2C40;
+}

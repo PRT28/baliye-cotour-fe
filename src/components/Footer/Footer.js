@@ -16,7 +16,7 @@ export default function Footer() {
           <li><Link href="#">Cor-Set</Link></li>
           <li><Link href="#">Potli</Link></li>
           <li><Link href="#">About Us</Link></li>
-          <li><Link href="#">Terms & Conditions</Link></li>
+          <li><Link href="/terms_and_conditions">Terms & Conditions</Link></li>
         </ul>
       </div>
 

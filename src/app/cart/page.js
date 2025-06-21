@@ -11,6 +11,34 @@ export default function Home() {
 
     const [step, setStep] = useState(0);
 
+
+    const handleCheckout = async () => {
+        setLoading(true);
+        const stripe = await stripePromise;
+
+        const res = await fetch("http://localhost:8086/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: {
+            amount: 500
+        }
+        });
+
+        const data = await res.json();
+
+        const result = await stripe?.redirectToCheckout({
+        sessionId: data.id,
+        });
+
+        if (result?.error) {
+        alert(result.error.message);
+        }
+
+        setLoading(false);
+  };
+
   return (
     <div className={styles.page}>
         <div className={styles.headerWrapper}>
@@ -71,7 +99,7 @@ export default function Home() {
                     if (step  < 1) {
                         setStep(step + 1);
                     } else {
-                        window.location.pathname = "/success"
+                        handleCheckout()
                     }
                     }}>{step === 1 ? 'Proceed to Payment'  : 'Continue' }</button>
             </div>
