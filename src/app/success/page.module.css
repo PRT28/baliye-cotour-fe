@@ -1,0 +1,77 @@
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+
+}
+
+.ordernum {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    text-align: center;
+
+}
+
+.hr {
+    width: 30vw;
+    height: 1px;
+    background-color: #9BA1B04D;
+}
+
+.greenTag {
+    background-color: #E0F1DC;
+    padding: 4px 16px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #426340;
+}
+
+.orderList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    height: fit-content;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    height: 400px;
+    width: 300px;
+    padding: 16px 20px;
+}
+
+.cardImg {
+    height: 90%;
+    width: 100%;
+}
+
+.cardTitle {
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.6px;
+
+}
+
+.cardSub {
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0%;
+color: #5C6476;
+}

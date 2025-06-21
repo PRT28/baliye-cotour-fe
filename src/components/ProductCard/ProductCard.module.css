@@ -1,6 +1,6 @@
   
   .productCard {
-    height: 450px;
+    height: fit-content;
   }
 
   .productImg {

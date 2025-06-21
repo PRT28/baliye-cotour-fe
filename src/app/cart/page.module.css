@@ -207,6 +207,10 @@
     border: 2px solid #d4d4d4; /* CSS variable for $secondaryColor */
     border-radius: 50%;
   }
+
+  .addressWrapper {
+    background-color: white;
+  }
  
   .addressContainer, .measurementContainer {
     display: flex;

@@ -36,9 +36,9 @@ const NavBar = () => {
                 priority
                 style={{marginRight: '7rem'}}
             />
-            {token ? <div className={styles.contentWrapper}>
-                    <img src="/ShoppingCart.svg" alt="" />
-                    <img src="/User.svg" alt="" />
+            {!token ? <div className={styles.contentWrapper}>
+                    <div><img src="/ShoppingCart.svg" alt="" /></div>
+                    <div onClick={() => window.location.pathname="/account"}><img src="/User.svg" alt="" /></div>
                 </div> : <>
                     <a href="/login" className={styles.text}>Login</a>
             </>}

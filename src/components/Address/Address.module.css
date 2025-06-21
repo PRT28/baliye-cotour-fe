@@ -1,0 +1,86 @@
+
+.header {
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6000000238418579px;
+}
+
+.radio {
+    position: relative;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+  }
+  
+  .radio:before {
+    transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+    transform: scale(0, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0.125rem; /* Converted rem(2) to 0.125rem assuming 1rem = 16px */
+    z-index: 1;
+    width: 0.75rem; /* Converted rem(12) to 0.75rem */
+    height: 0.75rem; /* Converted rem(12) to 0.75rem */
+    background: #9B2C40;
+    border-radius: 50%;
+  }
+  
+  .radio:checked:before {
+    transform: scale(1, 1);
+  }
+  
+  .radio:checked:after {
+    border: 2px solid #9B2C40;
+  }
+  
+  .radio:after {
+    content: "";
+    position: absolute;
+    top: -0.25rem; /* Converted rem(-4) to -0.25rem */
+    left: -0.125rem; /* Converted rem(-2) to -0.125rem */
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border: 2px solid #d4d4d4; /* CSS variable for $secondaryColor */
+    border-radius: 50%;
+  }
+
+  .addressWrapper {
+    background-color: white;
+  }
+ 
+  .addressContainer, .measurementContainer {
+    display: flex;
+    align-items: baseline;
+    padding: 32px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  .address, .measurement {
+    cursor: pointer;
+  }
+
+  .measurement {
+    width: 100%;
+  }
+
+  .addName {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    margin-bottom: 12px;
+    
+  }
+
+  .addVal {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    margin-bottom: 4px;
+    color: #5C6476;
+
+  }
