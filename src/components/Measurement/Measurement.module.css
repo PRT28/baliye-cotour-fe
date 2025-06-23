@@ -9,6 +9,11 @@
     letter-spacing: -0.6000000238418579px;
 }
 
+.measurementWrapper {
+  width: 100%;
+}
+
+
 .radio {
     position: relative;
     margin: 0 1rem 0 0;
@@ -56,7 +61,6 @@
   .addressContainer, .measurementContainer {
     display: flex;
     align-items: baseline;
-    width: 912px;
     background: #fff;
     padding: 32px;
     border-bottom: 1px solid #E8E8E8;
@@ -125,7 +129,6 @@
   flex-direction: column;
   gap: 24px;
   background-color: white;
-  width: 912px;
 }
 
 .input {
@@ -162,7 +165,6 @@
 .measurementCard {
   display: flex;
   align-items: baseline;
-  width: 912px;
   background: #fff;
   padding: 32px;
   border-bottom: 1px solid #E8E8E8;

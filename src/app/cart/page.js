@@ -5,39 +5,43 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import Button from "@/components/Button/Button";
 import Address from "@/components/Address/Address";
+import {loadStripe} from '@stripe/stripe-js';
 
+const stripePromise = loadStripe('pk_test_51RcZTKIEExz8OCXnz6fPGXkmCHmQ1jFftndg0jz5d2bFT2kVjr49XcZBQi6LckFFaZSiFEHlFsJbeYdcvSrmRHlF00n3lasIbb');
 
 export default function Home() {
 
     const [step, setStep] = useState(0);
+    const [loading, setLoading] = useState(false);
 
 
     const handleCheckout = async () => {
-        setLoading(true);
-        const stripe = await stripePromise;
+  setLoading(true);
+  try {
+    const res = await fetch("http://localhost:8085/order/pay/init/test?amount=500", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-        const res = await fetch("http://localhost:8086/api/create-checkout-session", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: {
-            amount: 500
-        }
-        });
+    const data = await res.json();
 
-        const data = await res.json();
+    const paymentUrl = data?.data?.content?.paymentUrl;
+    if (paymentUrl) {
+      // ✅ Redirect to Stripe Checkout
+      window.location.href = paymentUrl;
+    } else {
+      alert("Failed to create payment session.");
+    }
+  } catch (err) {
+    console.error("Checkout error:", err);
+    alert("An error occurred while initiating payment.");
+  } finally {
+    setLoading(false);
+  }
+};
 
-        const result = await stripe?.redirectToCheckout({
-        sessionId: data.id,
-        });
-
-        if (result?.error) {
-        alert(result.error.message);
-        }
-
-        setLoading(false);
-  };
 
   return (
     <div className={styles.page}>

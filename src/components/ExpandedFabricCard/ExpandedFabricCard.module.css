@@ -1,0 +1,43 @@
+.card {
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.expanded {
+  grid-column: span 3;
+  max-height: 1000px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.imageRow img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.red {
+  filter: brightness(0.5) saturate(100%) sepia(100%) hue-rotate(-50deg) saturate(600%) brightness(90%);
+}
+
+.blue {
+  filter: brightness(0.5) saturate(100%) sepia(100%) hue-rotate(180deg) saturate(600%) brightness(90%);
+}
+
+.white {
+  filter: brightness(0.5) invert(1);
+}

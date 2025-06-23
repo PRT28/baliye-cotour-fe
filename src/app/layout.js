@@ -1,3 +1,6 @@
+
+'use client'
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -6,6 +9,9 @@ import SessionWrapper from "./SessionWrapper";
 import 'core-js'
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
+
+
+import { usePathname } from 'next/navigation'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,12 +32,14 @@ const metadata = {
 
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname()
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
         <SessionWrapper>{children}</SessionWrapper>
-        <Footer />
+        {!pathname.includes('design') && <Footer />}
       </body>
     </html>
   );

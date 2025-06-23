@@ -29,7 +29,7 @@ export default function Page() {
                         <div className={styles.listItem +" "+ (opt === 3 && styles.activeItem)} onClick={() => setOpt(3)}>All Orders</div>
                     </div>
                 </div>
-                <div>
+                <div style={{width: '100%'}}>
                     {opt === 0 && <PersonalDetails />}
                     {opt === 1 && <Measurement showRadio={false} />}
                     {opt === 2 && <Address showRadio={false} />}
