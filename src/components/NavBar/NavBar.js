@@ -7,16 +7,16 @@ import Image from "next/image";
 const NavBar = () => {
     function getCookieValue(key) {
         const name = key + "=";
-        const decodedCookies = decodeURIComponent(window?.document?.cookie);
-        const cookiesArray = decodedCookies.split(';');
-
-        for (let i = 0; i < cookiesArray.length; i++) {
-            let cookie = cookiesArray[i].trim();
-            if (cookie.indexOf(name) === 0) {
-                return cookie.substring(name.length, cookie.length);
+        if (typeof window !== undefined) {
+            const decodedCookies = decodeURIComponent(window?.document?.cookie);
+            const cookiesArray = decodedCookies.split(';');
+            for (let i = 0; i < cookiesArray.length; i++) {
+                let cookie = cookiesArray[i].trim();
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
             }
         }
-        
         return null;
     }
 
@@ -25,8 +25,8 @@ const NavBar = () => {
     return (
         <div className={styles.navbar}>
             <div className={styles.contentWrapper}>
-                <div onClick={() => window.location.pathname = '/kurta'} className={styles.text}>Coord Set</div>
-                <div className={styles.text}>Potli Bags</div>
+                <div style={{ cursor: "pointer" }} onClick={() => window.location.pathname = '/kurta'} className={styles.text}>Coord Set</div>
+                <div style={{ cursor: "pointer" }} className={styles.text}>Potli Bags</div>
             </div>
             <Image
                 src="/baliye.svg"
@@ -34,13 +34,14 @@ const NavBar = () => {
                 width={200}
                 height={38}
                 priority
-                style={{marginRight: '7rem'}}
+                onClick={() => window.location.pathname = "/"}
+                style={{ marginRight: '7rem', cursor: "pointer" }}
             />
             {!token ? <div className={styles.contentWrapper}>
-                    <div><img src="/ShoppingCart.svg" alt="" /></div>
-                    <div onClick={() => window.location.pathname="/account"}><img src="/User.svg" alt="" /></div>
-                </div> : <>
-                    <a href="/login" className={styles.text}>Login</a>
+                <div style={{ cursor: "pointer" }} onClick={() => window.location.pathname = "/cart"}><img src="/ShoppingCart.svg" alt="" /></div>
+                <div style={{ cursor: "pointer" }} onClick={() => window.location.pathname = "/account"}><img src="/User.svg" alt="" /></div>
+            </div> : <>
+                <a href="/login" className={styles.text}>Login</a>
             </>}
         </div>
     );

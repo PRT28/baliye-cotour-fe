@@ -25,9 +25,9 @@ export default function Footer() {
         <p>Blaiye@gmail.com</p>
         <p>+123 567 8900</p>
         <div className={styles.socials}>
-          <Link href="#"><Image src="/icons/instagram.svg" alt="Instagram" width={20} height={20} /></Link>
-          <Link href="#"><Image src="/icons/twitter.svg" alt="Twitter" width={20} height={20} /></Link>
-          <Link href="#"><Image src="/icons/facebook.svg" alt="Facebook" width={20} height={20} /></Link>
+          <Link href="#"><Image src="/icons/InstagramLogo.png" alt="Instagram" width={24} height={24} /></Link>
+          <Link href="#"><Image src="/icons/TwitterLogo.png" alt="Twitter" width={24} height={24} /></Link>
+          <Link href="#"><Image src="/icons/FacebookLogo.png" alt="Facebook" width={24} height={24} /></Link>
         </div>
       </div>
     </footer>

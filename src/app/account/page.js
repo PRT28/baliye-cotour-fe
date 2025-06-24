@@ -5,10 +5,11 @@ import Measurement from "@/components/Measurement/Measurement";
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import PersonalDetails from "@/components/PersonalDetails/PersonalDetails";
+import Orders from "@/components/Orders/Orders";
 
 export default function Page() {
 
-    const [opt, setOpt] = useState(1);
+    const [opt, setOpt] = useState(0);
 
     return (
         <div className={styles.page}>
@@ -33,6 +34,7 @@ export default function Page() {
                     {opt === 0 && <PersonalDetails />}
                     {opt === 1 && <Measurement showRadio={false} />}
                     {opt === 2 && <Address showRadio={false} />}
+                    {opt === 3 && <Orders />}
                 </div>
             </div>
         </div>
